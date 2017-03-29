@@ -25,7 +25,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="?android:attr/colorFocusedHighlight"
+            android:background="@color/colorPrimary"
             app:title="@string/title_activity_register" /><![CDATA[
 
         app:popupTheme="@style/AppTheme.PopupOverlay" />
@@ -46,12 +46,14 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_column="0"
             android:layout_marginTop="47dp"
-            android:layout_row="1"
             android:paddingRight="5dp"
+            android:paddingLeft="0dp"
+            android:paddingEnd="5dp"
+            android:paddingStart="0dp"
             android:text="@string/name"
-            android:textAlignment="textEnd" />
+            android:textAlignment="textEnd"
+            android:layout_gravity="end"/>
 
         <EditText
             android:id="@+id/editRegisterName"
@@ -59,6 +61,7 @@
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/registerName"
             android:layout_toRightOf="@+id/registerName"
+            android:layout_toEndOf="@+id/registerName"
             android:ems="10"
             android:inputType="textPersonName"
             android:layout_alignRight="@+id/editRegisterSurname"
@@ -72,9 +75,14 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_toLeftOf="@+id/editRegisterSurname"
+            android:layout_toStartOf="@+id/editRegisterSurname"
             android:paddingRight="5dp"
+            android:paddingLeft="0dp"
+            android:paddingEnd="5dp"
+            android:paddingStart="0dp"
             android:text="@string/surname"
-            android:textAlignment="textEnd" />
+            android:textAlignment="textEnd"
+            android:layout_gravity="end"/>
 
         <EditText
             android:id="@+id/editRegisterSurname"
@@ -82,6 +90,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/space1"
             android:layout_toRightOf="@+id/registerName"
+            android:layout_toEndOf="@+id/registerName"
             android:ems="10"
             android:inputType="textPersonName"
             android:layout_alignRight="@+id/fab"
@@ -95,9 +104,14 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_toLeftOf="@+id/editRegisterDOB"
+            android:layout_toStartOf="@+id/editRegisterDOB"
             android:paddingRight="5dp"
+            android:paddingLeft="0dp"
+            android:paddingEnd="5dp"
+            android:paddingStart="0dp"
             android:text="@string/dob"
-            android:textAlignment="textEnd" />
+            android:textAlignment="textEnd"
+            android:layout_gravity="end"/>
 
         <EditText
             android:id="@+id/editRegisterDOB"
@@ -105,6 +119,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/space2"
             android:layout_toRightOf="@+id/registerSurname"
+            android:layout_toLeftOf="@+id/registerSurname"
+            android:layout_toStartOf="@+id/registerSurname"
+            android:layout_toEndOf="@+id/registerSurname"
             android:ems="10"
             android:inputType="date"
             android:layout_alignRight="@+id/fab"
@@ -120,8 +137,12 @@
             android:layout_alignParentStart="true"
             android:layout_toStartOf="@+id/editRegisterDOB"
             android:paddingRight="5dp"
+            android:paddingLeft="0dp"
+            android:paddingStart="0dp"
+            android:paddingEnd="5dp"
             android:text="@string/prompt_email"
             android:textAlignment="textEnd"
+            android:layout_gravity="end"
             android:layout_toLeftOf="@+id/editRegisterDOB" />
 
         <EditText
@@ -147,8 +168,12 @@
             android:layout_toLeftOf="@+id/editRegisterPassword"
             android:layout_toStartOf="@+id/editRegisterPassword"
             android:paddingRight="5dp"
+            android:paddingLeft="0dp"
+            android:paddingStart="0dp"
+            android:paddingEnd="5dp"
             android:text="@string/password"
-            android:textAlignment="textEnd" />
+            android:textAlignment="textEnd"
+            android:layout_gravity="end"/>
 
         <EditText
             android:id="@+id/editRegisterPassword"
@@ -175,7 +200,7 @@
             android:layout_marginTop="18dp"
             android:adjustViewBounds="true"
             android:src="@android:drawable/ic_menu_save"
-            app:backgroundTint="?android:attr/colorActivatedHighlight" />
+            app:backgroundTint="@color/colorPrimary" />
 
         <Space
             android:id="@+id/space2"
